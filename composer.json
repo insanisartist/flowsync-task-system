@@ -1,0 +1,14 @@
+{
+    "name": "student/diplom-taskflow",
+    "description": "Простое дипломное приложение для учета и согласования задач.",
+    "type": "project",
+    "require": {
+        "phpoffice/phpspreadsheet": "^2.1",
+        "phpoffice/phpword": "^1.3"
+    },
+    "config": {
+        "platform": {
+            "php": "8.2.12"
+        }
+    }
+}

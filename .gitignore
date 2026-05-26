@@ -1,0 +1,23 @@
+# Внешние зависимости Composer.
+vendor/
+
+# Локальные утилиты и установщики Composer.
+composer.phar
+composer-setup.php
+
+# Временные и служебные файлы.
+_tmp_diplom_copy.docx
+*.tmp
+*.log
+Thumbs.db
+Desktop.ini
+
+# Экспортируемые отчеты и временные документы.
+exports/
+*.xlsx
+*.docx
+
+# Локальные настройки IDE и VCS.
+.idea/
+.vscode/
+.git/
