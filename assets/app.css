@@ -1,0 +1,122 @@
+/*
+ * Общие стили приложения FlowSync.
+ *
+ * Что делает:
+ * - задает светлую и темную тему;
+ * - оформляет карточки, таблицы, формы и навигацию;
+ * - добавляет единый внешний вид для всех страниц.
+ */
+
+:root {
+    color-scheme: light;
+    --app-bg: #f4f7fb;
+    --app-surface: #ffffff;
+    --app-surface-muted: #f8fafc;
+    --app-border: #dbe3ef;
+    --app-text: #1f2937;
+    --app-text-muted: #6b7280;
+    --app-navbar: #0f172a;
+    --app-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="dark"] {
+    color-scheme: dark;
+    --app-bg: #0b1220;
+    --app-surface: #111827;
+    --app-surface-muted: #172033;
+    --app-border: #243146;
+    --app-text: #e5edf7;
+    --app-text-muted: #94a3b8;
+    --app-navbar: #060b16;
+    --app-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body.app-body {
+    background-color: var(--app-bg) !important;
+    color: var(--app-text);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.app-navbar {
+    background-color: var(--app-navbar) !important;
+}
+
+.card,
+.app-surface {
+    background-color: var(--app-surface) !important;
+    color: var(--app-text);
+    border: 1px solid var(--app-border) !important;
+    box-shadow: var(--app-shadow) !important;
+}
+
+.app-muted-surface {
+    background-color: var(--app-surface-muted) !important;
+    border-color: var(--app-border) !important;
+}
+
+.text-muted,
+.small.text-muted,
+.form-text,
+.text-white-50 {
+    color: var(--app-text-muted) !important;
+}
+
+.form-control,
+.form-select,
+.table,
+.table > :not(caption) > * > * {
+    color: var(--app-text);
+}
+
+.form-control,
+.form-select {
+    background-color: var(--app-surface-muted);
+    border-color: var(--app-border);
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: var(--app-surface);
+    color: var(--app-text);
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.2);
+}
+
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-color: var(--app-text);
+    --bs-table-border-color: var(--app-border);
+    --bs-table-striped-bg: rgba(148, 163, 184, 0.08);
+    --bs-table-hover-bg: rgba(59, 130, 246, 0.08);
+}
+
+.alert-info {
+    background-color: rgba(59, 130, 246, 0.12);
+    border-color: rgba(59, 130, 246, 0.2);
+    color: var(--app-text);
+}
+
+.theme-toggle {
+    min-width: 132px;
+}
+
+.theme-toggle-label {
+    display: inline-block;
+    min-width: 74px;
+    text-align: left;
+}
+
+.app-login-shell {
+    min-height: 100vh;
+}
+
+.app-login-topbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
